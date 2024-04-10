@@ -11,7 +11,7 @@
    az --version
    ```
 
-## Deploy Resources
+## Deploy Resource Group
 
 1. Log in to your account:
    ```pwsh
@@ -32,4 +32,17 @@
 1. Deploy the changes:
    ```pwsh
    az deployment sub create --location AustraliaEast --parameters main.bicepparam
+   ```
+
+## Deploy App Configuration
+
+1. Preview the changes:
+   ```pwsh
+   az deployment group what-if --resource-group rg-azure-aue --parameters appConfiguration.bicepparam
+   ```
+   (Optionally use the `--subscription` argument here rather than setting the subscription for the session in the previous step.)
+
+1. Deploy the changes:
+   ```pwsh
+   az deployment group create --resource-group rg-azure-aue --parameters appConfiguration.bicepparam
    ```
