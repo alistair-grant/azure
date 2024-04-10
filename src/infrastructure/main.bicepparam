@@ -1,4 +1,4 @@
 using 'main.bicep'
 
-param resourceGroupName = 'rg-azure-aue'
-param resourceGroupLocation = 'AustraliaEast'
+param location = 'AustraliaEast'
+param resourceBaseName = 'azure-aue2'
